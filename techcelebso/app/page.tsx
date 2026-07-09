@@ -52,9 +52,9 @@ export default function Home() {
         <div className="hero-top-text">
           <p>With Cyntexa you're not just expanding your team, you're augmenting your capabilities. Let's join forces to create a future that's not just possible, but inevitable.</p>
         </div>
-        <div className="flex justify-center mb-12">
-          <img src="/images/celebsoX_logo.jpg" alt="Experience CelebsoX" className="max-w-[800px] w-full h-auto object-contain" />
-        </div>
+        <h1 className="hero-title">CelebsoX.</h1>
+        <p className="hero-subtitle">IT solutions & services company.</p>
+
         <div id="industries" className="client-logos">
           <div className="client-logo-wrapper"><img src="/images/forbes.jpg" alt="Forbes" /></div>
           <div className="client-logo-wrapper"><img src="/images/yourstory.jpg" alt="YourStory" /></div>
