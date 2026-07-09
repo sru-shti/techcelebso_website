@@ -917,6 +917,76 @@ a {
 }
 
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .navbar {
+    flex-direction: column;
+    padding: 20px 5%;
+    gap: 15px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px;
+  }
+  .portfolio-card,
+  .cta-banner,
+  .client-logos,
+  .partner-logos {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+  .cta-banner {
+    padding: 30px 15px !important;
+  }
+  .leading-right-panel, .portfolio-image-container {
+    width: 100%;
+  }
+  .client-logo-wrapper, .partner-logo-wrapper {
+    margin-bottom: 20px;
+  }
+  .cta-text {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-section {
+    padding-top: 40px;
+  }
+  .journey-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .journey-content-wrapper {
+    padding-left: 0;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .journey-btn {
+    margin-top: 20px;
+  }
+  .portfolio-image-placeholder {
+    height: 250px;
+  }
+
   .leading-charge {
     flex-direction: column;
   }
