@@ -3,14 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-const ArrowRightCircle = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-purple-700 dark:text-blue-400 ml-2 transition-colors">
-    <circle cx="12" cy="12" r="10"></circle>
-    <path d="M12 16l4-4-4-4"></path>
-    <path d="M8 12h8"></path>
-  </svg>
-);
-
 const PlusIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-800 dark:text-blue-400"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
 );
@@ -83,9 +75,6 @@ export default function Industries() {
                 {/* Text Content */}
                 <div className="flex-1 w-full">
                   <h2 className="text-3xl font-light text-slate-800 dark:text-white mb-6 transition-colors">{industry.title}</h2>
-                  <Link href="#" className="inline-flex items-center text-sm font-semibold text-purple-800 dark:text-blue-400 mb-8 hover:text-purple-600 dark:hover:text-blue-300 transition-colors">
-                    Download Now <ArrowRightCircle />
-                  </Link>
                   <p className="text-slate-500 dark:text-slate-400 leading-relaxed text-[15px] transition-colors">
                     {industry.description}
                   </p>
