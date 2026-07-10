@@ -118,7 +118,7 @@ function CollaborationsView() {
             </p>
           </div>
           <div className="hidden md:block relative z-10 w-[500px] aspect-square rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-purple-900/50 backdrop-blur-sm">
-             <img src="/images/events/collaborations/broadcast_media.png" alt="Broadcast Studio" className="w-full h-full object-cover" />
+             <img src="/images/event/big_picture_img.webp" alt="Collaboration" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
@@ -128,7 +128,7 @@ function CollaborationsView() {
          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white dark:bg-[#1a152e] border border-gray-100 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg group">
                <div className="h-64 overflow-hidden bg-slate-200 dark:bg-slate-800 relative">
-                  <img src="/images/events/collaborations/heroku_tour.jpg" alt="Heroku Tour" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <img src="/images/event/collaboration/re-Architecting Enterprise Agility.webp" alt="Heroku Tour" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute top-4 left-4 bg-white/90 dark:bg-black/90 backdrop-blur px-3 py-1 rounded text-xs font-bold text-purple-700 dark:text-blue-400">Global Tour</div>
                </div>
                <div className="p-8">
@@ -139,7 +139,7 @@ function CollaborationsView() {
             </div>
             <div className="bg-white dark:bg-[#1a152e] border border-gray-100 dark:border-gray-800 rounded-2xl overflow-hidden shadow-lg group">
                <div className="h-64 overflow-hidden bg-slate-200 dark:bg-slate-800 relative">
-                  <img src="/images/events/collaborations/retail_loyalty.jpg" alt="Retail Brands" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <img src="/images/event/collaboration/Retail Brands.webp" alt="Retail Brands" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute top-4 left-4 bg-white/90 dark:bg-black/90 backdrop-blur px-3 py-1 rounded text-xs font-bold text-purple-700 dark:text-blue-400">Industry Deep Dive</div>
                </div>
                <div className="p-8">
