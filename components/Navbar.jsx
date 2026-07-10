@@ -12,7 +12,7 @@ export default function Navbar() {
     <header className="navbar w-full flex items-center justify-between px-8 py-4 bg-white dark:bg-[#120f26] border-b border-gray-100 dark:border-gray-800 z-50 transition-colors duration-300">
       <div className="logo flex-shrink-0">
         <Link href="/">
-          <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">CelebsoX.</h1>
+          <img src="/images/celebso_logo.png" alt="Celebso Logo" className="h-8 w-auto cursor-pointer dark:brightness-0 dark:invert transition-all" />
         </Link>
       </div>
       <nav className="nav-links flex flex-1 justify-center items-center gap-6 text-sm font-medium text-gray-700 dark:text-gray-300">

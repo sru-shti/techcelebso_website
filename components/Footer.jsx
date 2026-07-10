@@ -30,8 +30,8 @@ export default function Footer() {
           
           {/* Column 1: Brand & Newsletter */}
           <div className="lg:col-span-2">
-            <Link href="/">
-               <h2 className="text-3xl font-bold tracking-tight mb-8">CelebsoX.</h2>
+            <Link href="/" className="inline-block mb-8">
+               <img src="/images/celebso_logo.png" alt="Celebso Logo" className="h-10 w-auto cursor-pointer brightness-0 invert" />
             </Link>
             
             <div className="bg-[#1a152e] p-6 rounded-lg mb-8 border border-gray-800">
