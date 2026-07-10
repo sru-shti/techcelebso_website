@@ -4,11 +4,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 const PlusIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-800 dark:text-blue-400"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orange-800 dark:text-blue-400"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
 );
 
 const MinusIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-800 dark:text-blue-400"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orange-800 dark:text-blue-400"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
 );
 
 const industriesData = [
@@ -40,11 +40,11 @@ export default function Industries() {
   const [openFaq, setOpenFaq] = useState(0); // first open by default
 
   return (
-    <main className="min-h-screen bg-white dark:bg-[#0b1221] transition-colors duration-300">
+    <main className="min-h-screen bg-white dark:bg-[#020617] transition-colors duration-300">
       
       {/* Hero Section */}
-      <section className="relative w-full h-[600px] overflow-hidden bg-white dark:bg-[#0b1221] flex items-center border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
-        <div className="absolute left-10 md:left-20 top-20 w-[400px] h-[400px] rounded-full bg-gradient-to-tr from-yellow-300 via-pink-400 to-purple-400 dark:from-blue-600 dark:via-purple-600 dark:to-indigo-800 opacity-60 blur-3xl z-0 pointer-events-none transition-colors duration-500"></div>
+      <section className="relative w-full h-[600px] overflow-hidden bg-white dark:bg-[#020617] flex items-center border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
+        <div className="absolute left-10 md:left-20 top-20 w-[400px] h-[400px] rounded-full bg-gradient-to-tr from-yellow-300 via-amber-400 to-orange-400 dark:from-blue-600 dark:via-orange-600 dark:to-indigo-800 opacity-60 blur-3xl z-0 pointer-events-none transition-colors duration-500"></div>
         
         <div className="max-w-[1400px] mx-auto w-full px-8 lg:px-20 z-10 flex flex-col md:flex-row items-center justify-between h-full">
           <div className="max-w-xl pt-20 md:pt-0">

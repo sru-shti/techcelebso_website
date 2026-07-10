@@ -297,7 +297,7 @@ export default function Home() {
         <div id="contact" className="cta-banner">
           <div className="cta-content">
             <h2>Make The Move</h2>
-            <button className="btn btn-purple-outline">LET'S COLLABORATE</button>
+            <button className="btn btn-orange-outline">LET'S COLLABORATE</button>
           </div>
           <div className="cta-text">
             <span className="reach-out">REACH OUT</span>

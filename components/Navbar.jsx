@@ -9,7 +9,7 @@ export default function Navbar() {
   const { theme, toggleTheme, mounted } = useTheme();
 
   return (
-    <header className="navbar w-full flex items-center justify-between px-8 py-4 bg-white dark:bg-[#120f26] border-b border-gray-100 dark:border-gray-800 z-50 transition-colors duration-300">
+    <header className="navbar w-full flex items-center justify-between px-8 py-4 bg-white dark:bg-[#0f172a] border-b border-gray-100 dark:border-gray-800 z-50 transition-colors duration-300">
       <div className="logo flex-shrink-0">
         <Link href="/">
           <img src="/images/celebso_logo.png" alt="Celebso Logo" className="h-8 w-auto cursor-pointer dark:brightness-0 dark:invert transition-all" />
@@ -26,7 +26,7 @@ export default function Navbar() {
             Events <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:rotate-180 transition-transform"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </Link>
           <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 z-50">
-            <div className="bg-white dark:bg-[#1a152e] border border-gray-100 dark:border-gray-800 shadow-xl rounded-lg p-2 w-56 flex flex-col">
+            <div className="bg-white dark:bg-[#1e293b] border border-gray-100 dark:border-gray-800 shadow-xl rounded-lg p-2 w-56 flex flex-col">
               <Link href="/events?tab=footprints" className="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-800 hover:text-black dark:hover:text-white rounded transition-colors">
                 Events Footprints
               </Link>

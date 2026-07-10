@@ -34,7 +34,7 @@ export default function Footer() {
                <img src="/images/celebso_logo.png" alt="Celebso Logo" className="h-10 w-auto cursor-pointer brightness-0 invert" />
             </Link>
             
-            <div className="bg-[#1a152e] p-6 rounded-lg mb-8 border border-gray-800">
+            <div className="bg-[#1e293b] p-6 rounded-lg mb-8 border border-gray-800">
               <h3 className="font-semibold text-lg mb-4">Subscribe To Our Newsletter for latest business insights!</h3>
               <form className="flex flex-col gap-4">
                 <div className="flex gap-4">

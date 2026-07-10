@@ -3,7 +3,7 @@
 
 /* Base & Typography */
 :root {
-  --primary-color: #2b1f4c;
+  --primary-color: #ea580c;
   /* Deep purple from footer */
   --accent-yellow: #fecb6e;
   /* Yellow from button */
@@ -67,14 +67,14 @@ a {
   transform: translateY(-2px);
 }
 
-.btn-purple-outline {
+.btn-orange-outline {
   background: transparent;
   border: 2px solid #5de4c7;
   color: white;
   border-radius: 4px;
 }
 
-.btn-purple-outline:hover {
+.btn-orange-outline:hover {
   background: rgba(93, 228, 199, 0.1);
 }
 
