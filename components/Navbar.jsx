@@ -21,7 +21,21 @@ export default function Navbar() {
         <Link href="/industries" className={`hover:text-black dark:hover:text-white transition-colors ${pathname === '/industries' ? 'text-black dark:text-white font-semibold' : ''}`}>Industries</Link>
         <Link href="#" className="hover:text-black dark:hover:text-white transition-colors">Products</Link>
         <Link href="#" className="hover:text-black dark:hover:text-white transition-colors">Resources</Link>
-        <Link href="#" className="hover:text-black dark:hover:text-white transition-colors">Events</Link>
+        <div className="relative group">
+          <Link href="/events" className={`flex items-center gap-1 hover:text-black dark:hover:text-white transition-colors ${pathname === '/events' ? 'text-black dark:text-white font-semibold' : ''}`}>
+            Events <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:rotate-180 transition-transform"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </Link>
+          <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 z-50">
+            <div className="bg-white dark:bg-[#1a152e] border border-gray-100 dark:border-gray-800 shadow-xl rounded-lg p-2 w-56 flex flex-col">
+              <Link href="/events?tab=footprints" className="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-800 hover:text-black dark:hover:text-white rounded transition-colors">
+                Events Footprints
+              </Link>
+              <Link href="/events?tab=collaborations" className="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-800 hover:text-black dark:hover:text-white rounded transition-colors">
+                Collaborations
+              </Link>
+            </div>
+          </div>
+        </div>
         <Link href="#" className="hover:text-black dark:hover:text-white transition-colors">Careers</Link>
         <Link href="#" className="hover:text-black dark:hover:text-white transition-colors">Contact Us</Link>
       </nav>
