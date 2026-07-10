@@ -29,7 +29,7 @@ const industriesData = [
 ];
 
 const faqs = [
-  { q: "Why Should I Choose CelebsoX for Building Industry-Specific Solutions?", a: "With a strong foundation of forward-thinking, our goal is to provide your business with the most appropriate, up-to-date, and beneficial technology in your industry that you can benefit from. The organizational structure of CelebsoX is composed of consultants, architects, and developers who leverage industry-specific knowledge to offer bespoke technology-driven solutions that improve productivity, and reduce costs for long-term growth—interested in testing out our expertise serving your industry for free? Let's schedule a consultation as soon as possible." },
+  { q: "Why Should I Choose CelebsoX for Building Industry-Specific Solutions?", a: "With a strong foundation of forward-thinking, our goal is to provide your business with the most appropriate, up-to-date, and beneficial technology in your industry that you can benefit from. The organizational structure of CelebsoX is composed of consultants, architects, and developers who leverage industry-specific knowledge to offer bespoke technology-driven solutions that improve productivity, and reduce costs for long-term growth—interested in testing out our expertise serving your industry for free? Let&apos;s schedule a consultation as soon as possible." },
   { q: "How Can I Initiate Digital Transformation Journey With CelebsoX?", a: "You can initiate your digital transformation journey by reaching out to us for a free consultation. Our team will assess your current systems, understand your business objectives, and create a tailored roadmap that aligns with your industry standards." },
   { q: "Who Will be My Point of Contact If I Choose to Work With CelebsoX?", a: "You will be assigned a dedicated Account Manager and a Lead Solutions Architect. They will ensure seamless communication, provide regular project updates, and act as your primary points of contact throughout our engagement." },
   { q: "Can You Upgrade My Legacy On-Premises System to Cloud?", a: "Absolutely. We specialize in legacy system modernization and seamless cloud migrations (AWS, GCP, Azure, Salesforce). We ensure zero data loss and minimal downtime during the transition." },
@@ -50,7 +50,7 @@ export default function Industries() {
           <div className="max-w-xl pt-20 md:pt-0">
             <h1 className="text-5xl lg:text-6xl font-light text-slate-800 dark:text-white mb-6 leading-tight transition-colors">Industry Solutions We Offer</h1>
             <p className="text-lg text-slate-600 dark:text-slate-300 mb-10 leading-relaxed transition-colors">
-              Utilizing industry-specific knowledge, we're on the verge of triggering a new paradigm of changing business models and processes making them more customer-centric!
+              Utilizing industry-specific knowledge, we&apos;re on the verge of triggering a new paradigm of changing business models and processes making them more customer-centric!
             </p>
             <button className="px-8 py-4 border border-gray-200 dark:border-gray-700 rounded-md text-slate-700 dark:text-white font-medium hover:border-slate-800 dark:hover:border-white transition-colors bg-white dark:bg-transparent shadow-sm">
               Schedule a free consultation
