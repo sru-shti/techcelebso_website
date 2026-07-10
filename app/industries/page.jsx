@@ -1,0 +1,164 @@
+"use client";
+
+import React from "react";
+import Link from "next/link";
+
+const ArrowRightCircle = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-purple-700 ml-2">
+    <circle cx="12" cy="12" r="10"></circle>
+    <path d="M12 16l4-4-4-4"></path>
+    <path d="M8 12h8"></path>
+  </svg>
+);
+
+const industriesData = [
+  {
+    id: 1,
+    title: "Financial Services",
+    description: "With customer expectations continuing to change, financial institutions are under pressure to tailor their services to resonate with their customers. Bringing digital transformation to financial services will result in improved operational efficiency by automating manual tasks and integrating data into a central place.",
+    image: "/images/financial_services.jpg", // placeholder
+  },
+  {
+    id: 2,
+    title: "Insurance",
+    description: "The insurance industry is navigating a shifting landscape characterized by changing customer expectations and digital disruption. We help insurers streamline claims processing, enhance customer engagement through personalized digital portals, and leverage predictive analytics for better risk assessment.",
+    image: "/images/insurance.jpg",
+  },
+  {
+    id: 3,
+    title: "Retail & Consumer Goods",
+    description: "In the rapidly evolving retail landscape, maintaining brand loyalty requires seamless omnichannel experiences. Our solutions enable retailers to integrate online and offline touchpoints, optimize supply chain operations, and utilize customer data to deliver highly personalized shopping experiences.",
+    image: "/images/retail.jpg",
+  },
+  {
+    id: 4,
+    title: "Media & Communication",
+    description: "Media organizations face the constant challenge of delivering personalized content while managing vast digital assets. We empower media and communication companies to build resilient digital infrastructures, monetize digital content effectively, and engage audiences through targeted multi-channel distribution.",
+    image: "/images/media.jpg",
+  },
+  {
+    id: 5,
+    title: "Technology",
+    description: "Technology companies must innovate at breakneck speeds while scaling operations efficiently. We partner with tech firms to optimize their internal systems, implement robust DevOps practices, and build scalable cloud architectures that support rapid product iteration and deployment.",
+    image: "/images/technology.jpg",
+  },
+  {
+    id: 6,
+    title: "Professional Services",
+    description: "As the professional services industry evolves, there is a never-ending onslaught of challenges relating to customer acquisition and retention. We help you build a connected team, ensuring smooth collaboration, establishing 360-degree views of clients, and enabling personalized communication.",
+    image: "/images/professional.jpg",
+  },
+  {
+    id: 7,
+    title: "Energy & Utilities",
+    description: "The energy sector is undergoing a massive shift towards sustainability and smart grid technologies. Our digital solutions help utility companies modernize their infrastructure, optimize field service operations, and provide transparent digital interfaces for their consumers.",
+    image: "/images/energy.jpg",
+  },
+  {
+    id: 8,
+    title: "E-Commerce",
+    description: "E-commerce businesses need scalable, high-performing platforms to handle massive transaction volumes. We build custom B2B and B2C commerce solutions that integrate seamlessly with inventory management systems, ensuring a flawless customer journey from product discovery to checkout.",
+    image: "/images/ecommerce.jpg",
+  },
+  {
+    id: 9,
+    title: "Manufacturing",
+    description: "Modern manufacturing relies on intelligent systems and data-driven insights. We assist manufacturers in implementing Industry 4.0 solutions, automating supply chain tracking, and building dealer management portals that improve operational visibility and efficiency.",
+    image: "/images/manufacturing.jpg",
+  },
+  {
+    id: 10,
+    title: "Healthcare & Life Sciences",
+    description: "Healthcare providers must balance patient care with strict regulatory compliance and data security. We deliver secure, HIPAA-compliant patient management systems, telehealth platforms, and automated workflow solutions that allow healthcare professionals to focus on saving lives.",
+    image: "/images/healthcare.jpg",
+  },
+  {
+    id: 11,
+    title: "Logistics & Transportation",
+    description: "In the world of logistics, timing and visibility are everything. Our enterprise solutions provide real-time tracking, optimize fleet management routes, and automate complex freight operations to ensure goods are delivered efficiently and on schedule.",
+    image: "/images/logistics.jpg",
+  },
+  {
+    id: 12,
+    title: "Non-profit",
+    description: "Non-profit organizations need efficient ways to manage donors, volunteers, and campaigns. We help non-profits implement powerful CRM solutions that automate donor outreach, track fundraising goals in real-time, and maximize their impact in the communities they serve.",
+    image: "/images/nonprofit.jpg",
+  },
+  {
+    id: 13,
+    title: "Real Estate",
+    description: "Real estate professionals require tools that streamline property management and client communication. Our digital solutions provide immersive property showcasing, automate lease management, and connect agents with potential buyers through unified CRM platforms.",
+    image: "/images/realestate.jpg",
+  },
+  {
+    id: 14,
+    title: "Education",
+    description: "The education sector is increasingly relying on digital platforms for distance learning and administration. We build comprehensive student information systems, virtual classrooms, and alumni engagement portals that foster a connected and interactive learning environment.",
+    image: "/images/education.jpg",
+  }
+];
+
+export default function Industries() {
+  return (
+    <main className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative w-full h-[600px] overflow-hidden bg-white flex items-center border-b border-gray-100">
+        <div className="absolute left-10 md:left-20 top-20 w-[400px] h-[400px] rounded-full bg-gradient-to-tr from-yellow-300 via-pink-400 to-purple-400 opacity-60 blur-3xl z-0 pointer-events-none"></div>
+        
+        <div className="max-w-[1400px] mx-auto w-full px-8 lg:px-20 z-10 flex flex-col md:flex-row items-center justify-between h-full">
+          <div className="max-w-xl pt-20 md:pt-0">
+            <h1 className="text-5xl lg:text-6xl font-light text-slate-800 mb-6 leading-tight">Industry Solutions We Offer</h1>
+            <p className="text-lg text-slate-600 mb-10 leading-relaxed">
+              Utilizing industry-specific knowledge, we're on the verge of triggering a new paradigm of changing business models and processes making them more customer-centric!
+            </p>
+            <button className="px-8 py-4 border border-gray-200 rounded-md text-slate-700 font-medium hover:border-slate-800 transition-colors bg-white shadow-sm">
+              Schedule a free consultation
+            </button>
+          </div>
+        </div>
+        
+        <div className="absolute top-0 right-0 w-1/2 h-full z-0 clip-diagonal hidden lg:block bg-slate-100">
+           {/* Placeholder for the worker image. In a real scenario, map to a real asset */}
+           <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
+        </div>
+      </section>
+
+      {/* Industries List */}
+      <section className="py-24 max-w-[1200px] mx-auto px-8">
+        <div className="flex flex-col gap-32">
+          {industriesData.map((industry, index) => {
+            const isEven = index % 2 === 0;
+
+            return (
+              <div key={industry.id} className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-16`}>
+                
+                {/* Text Content */}
+                <div className="flex-1 w-full">
+                  <h2 className="text-3xl font-light text-slate-800 mb-6">{industry.title}</h2>
+                  <Link href="#" className="inline-flex items-center text-sm font-semibold text-purple-800 mb-8 hover:text-purple-600 transition-colors">
+                    Download Now <ArrowRightCircle />
+                  </Link>
+                  <p className="text-slate-500 leading-relaxed text-[15px]">
+                    {industry.description}
+                  </p>
+                </div>
+
+                {/* Image Placeholder */}
+                <div className="flex-1 w-full">
+                  <div className="w-full aspect-[16/9] bg-slate-100 rounded shadow-sm overflow-hidden relative">
+                     {/* Temporary placeholder layout to simulate images */}
+                     <div className="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-300"></div>
+                     <div className="absolute inset-0 flex items-center justify-center text-slate-400 font-medium">
+                        {industry.title} Visual
+                     </div>
+                  </div>
+                </div>
+
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    </main>
+  );
+}

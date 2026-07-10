@@ -1105,3 +1105,8 @@ a {
   color: #64748b;
   padding: 10px 20px;
 }
+
+/* Utilities for Industries Page */
+.clip-diagonal {
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+}

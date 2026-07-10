@@ -31,21 +31,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
-      {/* Header */}
-      <header className="navbar">
-        <div className="logo"><img src="/images/celebso_logo.png" alt="Celebso Logo" className="h-8 w-auto" /></div>
-        <nav className="nav-links">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#industries">Industries</a>
-          <a href="#products">Products</a>
-          <a href="#resources">Resources</a>
-          <a href="#events">Events</a>
-          <a href="#careers">Careers</a>
-          <a href="#contact">Contact Us</a>
-        </nav>
-        <button className="btn btn-outline" onClick={() => document.getElementById('contact')?.scrollIntoView()}>Get a Free Consultation</button>
-      </header>
+
 
       {/* Hero Section */}
       <section id="about" className="hero-section">
