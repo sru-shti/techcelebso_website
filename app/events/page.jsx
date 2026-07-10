@@ -12,12 +12,9 @@ const faqs = [
 ];
 
 const pastEvents = [
-  { id: 1, title: "The Future of Cloud Architecture summit", date: "May 5th-7th, 2026", img: "/images/events/footprints/event_1.jpg", action: "Read Now" },
-  { id: 2, title: "Enterprise Automation at Scale 2025", date: "October 15, 2025", img: "/images/events/footprints/event_2.jpg", action: "Watch Now" },
-  { id: 3, title: "Global CRM Strategies Masterclass", date: "August 22, 2025", img: "/images/events/footprints/event_3.jpg", action: "Read Now" },
-  { id: 4, title: "Salesforce Crest Partner Leadership Symposium", date: "June 10, 2025", img: "/images/events/footprints/event_4.jpg", action: "Watch Now" },
-  { id: 5, title: "Multi-Cloud Security & Compliance", date: "March 3, 2025", img: "/images/events/footprints/event_5.jpg", action: "Read Now" },
-  { id: 6, title: "Innovators Basement to Boardroom Story", date: "January 14, 2025", img: "/images/events/footprints/event_6.jpg", action: "Watch Now" }
+  { id: 1, title: "Celebso Founders Meet-Up (Jaipur)", date: "September 26", img: "/images/event/event_footprint/founders_meetup_jaipur.jpg", action: "View Highlights" },
+  { id: 2, title: "Jaipur Startup Valley Meetup", date: "Recent Event", img: "/images/event/event_footprint/celebso_vally.jpg", action: "Read Recap" },
+  { id: 3, title: "Mewar Startup - Investor Connect", date: "October 8, 2025", img: "/images/event/event_footprint/Mewar Startup.jpg", action: "Register Now" }
 ];
 
 function FootprintsView() {
