@@ -5,6 +5,36 @@ import React, { useState, useEffect } from "react";
 export default function ChatBot() {
   const [showToast, setShowToast] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [messages, setMessages] = useState([
+    { text: "Hi! What can we assist you with?", isBot: true }
+  ]);
+  const [inputValue, setInputValue] = useState("");
+  const messagesEndRef = React.useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      scrollToBottom();
+    }
+  }, [messages, isOpen]);
+
+  const handleSendMessage = (e) => {
+    e.preventDefault();
+    if (!inputValue.trim()) return;
+
+    // Add user message
+    const newMsg = { text: inputValue, isBot: false };
+    setMessages(prev => [...prev, newMsg]);
+    setInputValue("");
+
+    // Simulate bot reply
+    setTimeout(() => {
+      setMessages(prev => [...prev, { text: "Thanks for reaching out! A representative will be with you shortly to assist with your query.", isBot: true }]);
+    }, 1000);
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -37,18 +67,32 @@ export default function ChatBot() {
 
       {/* Mock Chat Panel */}
       {isOpen && (
-        <div className="pointer-events-auto w-80 h-96 bg-white dark:bg-slate-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-800 flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-10 duration-300">
-           <div className="bg-[#ea580c] p-4 text-white">
+        <div className="pointer-events-auto w-[calc(100vw-3rem)] sm:w-80 h-[60vh] sm:h-96 max-h-[600px] bg-white dark:bg-slate-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-800 flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-10 duration-300">
+           <div className="bg-[#ea580c] p-4 text-white shrink-0">
               <h3 className="font-semibold text-lg">CelebsoX Support</h3>
               <p className="text-xs text-orange-200">We typically reply in a few minutes.</p>
            </div>
-           <div className="flex-1 p-4 bg-slate-50 dark:bg-slate-900 overflow-y-auto">
-              <div className="bg-white dark:bg-slate-800 border border-gray-100 dark:border-gray-700 rounded-lg p-3 text-sm text-slate-700 dark:text-slate-300 w-3/4 shadow-sm">
-                Hi! What can we assist you with?
-              </div>
+           <div className="flex-1 p-4 bg-slate-50 dark:bg-slate-900 overflow-y-auto flex flex-col gap-3">
+              {messages.map((msg, idx) => (
+                <div key={idx} className={`max-w-[85%] rounded-lg p-3 text-sm shadow-sm ${msg.isBot ? 'bg-white dark:bg-slate-800 border border-gray-100 dark:border-gray-700 text-slate-700 dark:text-slate-300 self-start' : 'bg-[#ea580c] text-white self-end'}`}>
+                  {msg.text}
+                </div>
+              ))}
+              <div ref={messagesEndRef} />
            </div>
-           <div className="p-3 bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800">
-             <input type="text" placeholder="Type a message..." className="w-full bg-slate-100 dark:bg-slate-800 text-sm rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ea580c]" />
+           <div className="p-3 bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800 shrink-0">
+             <form onSubmit={handleSendMessage} className="flex gap-2">
+               <input 
+                 type="text" 
+                 value={inputValue}
+                 onChange={(e) => setInputValue(e.target.value)}
+                 placeholder="Type a message..." 
+                 className="flex-1 bg-slate-100 dark:bg-slate-800 text-sm rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ea580c] text-slate-900 dark:text-white" 
+               />
+               <button type="submit" className="bg-[#ea580c] hover:bg-[#c2410c] text-white rounded-full w-9 h-9 flex items-center justify-center transition-colors">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+               </button>
+             </form>
            </div>
         </div>
       )}
