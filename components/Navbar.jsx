@@ -37,7 +37,7 @@ export default function Navbar() {
           </div>
         </div>
         <Link href="#" className="hover:text-black dark:hover:text-white transition-colors">Careers</Link>
-        <Link href="#" className="hover:text-black dark:hover:text-white transition-colors">Contact Us</Link>
+        <Link href="/contact" className={`hover:text-black dark:hover:text-white transition-colors ${pathname === '/contact' ? 'text-black dark:text-white font-semibold' : ''}`}>Contact Us</Link>
       </nav>
       <div className="flex-shrink-0 flex items-center gap-4">
         {mounted && (
