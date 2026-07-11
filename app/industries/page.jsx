@@ -43,11 +43,11 @@ export default function Industries() {
     <main className="min-h-screen bg-white dark:bg-[#020617] transition-colors duration-300">
       
       {/* Hero Section */}
-      <section className="relative w-full h-[600px] overflow-hidden bg-white dark:bg-[#020617] flex items-center border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
+      <section className="relative w-full min-h-[500px] md:min-h-[600px] h-auto md:h-[600px] py-24 md:py-0 overflow-hidden bg-white dark:bg-[#020617] flex items-center border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
         <div className="absolute left-10 md:left-20 top-20 w-[400px] h-[400px] rounded-full bg-gradient-to-tr from-yellow-300 via-amber-400 to-orange-400 dark:from-blue-600 dark:via-orange-600 dark:to-indigo-800 opacity-60 blur-3xl z-0 pointer-events-none transition-colors duration-500"></div>
         
         <div className="max-w-[1400px] mx-auto w-full px-8 lg:px-20 z-10 flex flex-col md:flex-row items-center justify-between h-full">
-          <div className="max-w-xl pt-20 md:pt-0">
+          <div className="max-w-xl">
             <h1 className="text-5xl lg:text-6xl font-light text-slate-800 dark:text-white mb-6 leading-tight transition-colors">Industry Solutions We Offer</h1>
             <p className="text-lg text-slate-600 dark:text-slate-300 mb-10 leading-relaxed transition-colors">
               Utilizing industry-specific knowledge, we&apos;re on the verge of triggering a new paradigm of changing business models and processes making them more customer-centric!

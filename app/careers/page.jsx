@@ -96,7 +96,7 @@ export default function CareersPage() {
                     key={i} 
                     src={img} 
                     alt="Culture" 
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === activeValue ? 'opacity-100 z-10' : 'opacity-0 z-0'} ${i === 0 ? 'p-10 dark:invert dark:brightness-0 opacity-20 object-contain' : ''}`}
+                    className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${i === activeValue ? 'opacity-100 z-10' : 'opacity-0 z-0'} ${i === 0 ? 'p-16 object-contain dark:invert dark:brightness-0 opacity-50' : 'object-cover'}`}
                   />
                 ))}
              </div>

@@ -22,11 +22,9 @@ function FootprintsView() {
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+      
       {/* Hero Section */}
-      <section className="relative w-full h-[600px] overflow-hidden bg-white dark:bg-[#020617] flex items-center border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-orange-200 to-indigo-100 dark:from-orange-900/30 dark:to-indigo-900/30 opacity-70 blur-3xl z-0 pointer-events-none"></div>
-        <div className="absolute left-20 top-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-slate-100 dark:bg-slate-800/50 -z-10"></div>
-        
+      <section className="relative w-full min-h-[500px] md:min-h-[600px] h-auto md:h-[600px] py-24 md:py-0 overflow-hidden bg-slate-50 dark:bg-[#020617] flex items-center border-b border-gray-200 dark:border-gray-800 transition-colors">
         <div className="max-w-[1400px] mx-auto w-full px-8 lg:px-20 z-10 flex flex-col md:flex-row items-center justify-between h-full">
           <div className="max-w-xl">
             <h1 className="text-5xl lg:text-6xl font-light text-slate-800 dark:text-white mb-6 leading-tight">
@@ -41,7 +39,7 @@ function FootprintsView() {
           </div>
         </div>
         
-        <div className="absolute top-0 right-0 w-[45%] h-full z-0 bg-slate-100 dark:bg-slate-800" style={{ clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0 100%)" }}>
+        <div className="hidden md:block absolute top-0 right-0 w-[45%] h-full z-0 bg-slate-100 dark:bg-slate-800" style={{ clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0 100%)" }}>
            <img src="/images/events/footprints/hero_engineer.png" alt="Engineer" className="w-full h-full object-cover object-top opacity-90 mix-blend-multiply dark:mix-blend-normal" />
         </div>
       </section>
