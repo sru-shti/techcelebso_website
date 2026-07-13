@@ -3,33 +3,19 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
+import { industriesData, generateSlug as generateIndustrySlug } from "../../data/industries";
+import { ArrowRight } from "lucide-react";
+
 const PlusIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#3A86FF] dark:text-[#00F5D4]"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
 );
 
 const MinusIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orange-800 dark:text-blue-400"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#0B132B] dark:text-[#00F5D4]"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
 );
 
-const industriesData = [
-  { id: 1, title: "Financial Services", description: "With customer expectations continuing to change, financial institutions are under pressure to tailor their services to resonate with their customers. Bringing digital transformation to financial services will result in improved operational efficiency by automating manual tasks and integrating data into a central place.", image: "/images/industries/Financial Services.jpg" },
-  { id: 2, title: "Insurance", description: "The insurance industry is navigating a shifting landscape characterized by changing customer expectations and digital disruption. We help insurers streamline claims processing, enhance customer engagement through personalized digital portals, and leverage predictive analytics for better risk assessment.", image: "/images/industries/insurance.jpg" },
-  { id: 3, title: "Retail & Consumer Goods", description: "In the rapidly evolving retail landscape, maintaining brand loyalty requires seamless omnichannel experiences. Our solutions enable retailers to integrate online and offline touchpoints, optimize supply chain operations, and utilize customer data to deliver highly personalized shopping experiences.", image: "/images/industries/retail_consumer_goods.jpg" },
-  { id: 4, title: "Media & Communication", description: "Media organizations face the constant challenge of delivering personalized content while managing vast digital assets. We empower media and communication companies to build resilient digital infrastructures, monetize digital content effectively, and engage audiences through targeted multi-channel distribution.", image: "/images/industries/Media & Communication.jpg" },
-  { id: 5, title: "Technology", description: "Technology companies must innovate at breakneck speeds while scaling operations efficiently. We partner with tech firms to optimize their internal systems, implement robust DevOps practices, and build scalable cloud architectures that support rapid product iteration and deployment.", image: "/images/industries/Technology.jpg" },
-  { id: 6, title: "Professional Services", description: "As the professional services industry evolves, there is a never-ending onslaught of challenges relating to customer acquisition and retention. We help you build a connected team, ensuring smooth collaboration, establishing 360-degree views of clients, and enabling personalized communication.", image: "/images/industries/Professional Services.jpg" },
-  { id: 7, title: "Energy & Utilities", description: "The energy sector is undergoing a massive shift towards sustainability and smart grid technologies. Our digital solutions help utility companies modernize their infrastructure, optimize field service operations, and provide transparent digital interfaces for their consumers.", image: "/images/industries/Energy & Utilities.jpg" },
-  { id: 8, title: "E-Commerce", description: "E-commerce businesses need scalable, high-performing platforms to handle massive transaction volumes. We build custom B2B and B2C commerce solutions that integrate seamlessly with inventory management systems, ensuring a flawless customer journey from product discovery to checkout.", image: "/images/industries/E-Commerce.jpg" },
-  { id: 9, title: "Manufacturing", description: "Modern manufacturing relies on intelligent systems and data-driven insights. We assist manufacturers in implementing Industry 4.0 solutions, automating supply chain tracking, and building dealer management portals that improve operational visibility and efficiency.", image: "/images/industries/Manufacturing.jpg" },
-  { id: 10, title: "Healthcare & Life Sciences", description: "Healthcare providers must balance patient care with strict regulatory compliance and data security. We deliver secure, HIPAA-compliant patient management systems, telehealth platforms, and automated workflow solutions that allow healthcare professionals to focus on saving lives.", image: "/images/industries/Healthcare & Life Sciences.jpg" },
-  { id: 11, title: "Logistics & Transportation", description: "In the world of logistics, timing and visibility are everything. Our enterprise solutions provide real-time tracking, optimize fleet management routes, and automate complex freight operations to ensure goods are delivered efficiently and on schedule.", image: "/images/industries/Logistics & Transportation.jpg" },
-  { id: 12, title: "Non-profit", description: "Non-profit organizations need efficient ways to manage donors, volunteers, and campaigns. We help non-profits implement powerful CRM solutions that automate donor outreach, track fundraising goals in real-time, and maximize their impact in the communities they serve.", image: "/images/industries/Non-profit.jpg" },
-  { id: 13, title: "Real Estate", description: "Real estate professionals require tools that streamline property management and client communication. Our digital solutions provide immersive property showcasing, automate lease management, and connect agents with potential buyers through unified CRM platforms.", image: "/images/industries/Real Estate.jpg" },
-  { id: 14, title: "Education", description: "The education sector is increasingly relying on digital platforms for distance learning and administration. We build comprehensive student information systems, virtual classrooms, and alumni engagement portals that foster a connected and interactive learning environment.", image: "/images/industries/Education.jpg" }
-];
-
 const faqs = [
-  { q: "Why Should I Choose Antellay for Building Industry-Specific Solutions?", a: "With a strong foundation of forward-thinking, our goal is to provide your business with the most appropriate, up-to-date, and beneficial technology in your industry that you can benefit from. The organizational structure of Antellay is composed of consultants, architects, and developers who leverage industry-specific knowledge to offer bespoke technology-driven solutions that improve productivity, and reduce costs for long-term growth—interested in testing out our expertise serving your industry for free? Let&apos;s schedule a consultation as soon as possible." },
+  { q: "Why Should I Choose Antellay for Building Industry-Specific Solutions?", a: "With a strong foundation of forward-thinking, our goal is to provide your business with the most appropriate, up-to-date, and beneficial technology in your industry that you can benefit from. The organizational structure of Antellay is composed of consultants, architects, and developers who leverage industry-specific knowledge to offer bespoke technology-driven solutions that improve productivity, and reduce costs for long-term growth—interested in testing out our expertise serving your industry for free? Let's schedule a consultation as soon as possible." },
   { q: "How Can I Initiate Digital Transformation Journey With Antellay?", a: "You can initiate your digital transformation journey by reaching out to us for a free consultation. Our team will assess your current systems, understand your business objectives, and create a tailored roadmap that aligns with your industry standards." },
   { q: "Who Will be My Point of Contact If I Choose to Work With Antellay?", a: "You will be assigned a dedicated Account Manager and a Lead Solutions Architect. They will ensure seamless communication, provide regular project updates, and act as your primary points of contact throughout our engagement." },
   { q: "Can You Upgrade My Legacy On-Premises System to Cloud?", a: "Absolutely. We specialize in legacy system modernization and seamless cloud migrations (AWS, GCP, Azure, Salesforce). We ensure zero data loss and minimal downtime during the transition." },
@@ -37,56 +23,62 @@ const faqs = [
 ];
 
 export default function Industries() {
-  const [openFaq, setOpenFaq] = useState(0); // first open by default
+  const [openFaq, setOpenFaq] = useState(0);
 
   return (
-    <main className="min-h-screen bg-white dark:bg-[#0B132B] transition-colors duration-300">
+    <main className="min-h-screen bg-white dark:bg-[#0B132B] text-[#0B132B] dark:text-white transition-colors duration-300 font-sans">
       
-      {/* Hero Section */}
-      <section className="relative w-full min-h-[500px] md:min-h-[600px] h-auto md:h-[600px] py-24 md:py-0 overflow-hidden bg-white dark:bg-[#0B132B] flex items-center border-b border-[#E2E8F0] dark:border-[#1C2541] transition-colors duration-300">
-        <div className="absolute left-10 md:left-20 top-20 w-[400px] h-[400px] rounded-full bg-gradient-to-tr from-[#3A86FF]/20 via-[#70EEFF]/20 to-[#3A86FF]/10 dark:from-[#3A86FF]/20 dark:via-[#00F5D4]/10 dark:to-[#0B132B] opacity-60 blur-3xl z-0 pointer-events-none transition-colors duration-500"></div>
-        
-        <div className="max-w-[1400px] mx-auto w-full px-8 lg:px-20 z-10 flex flex-col md:flex-row items-center justify-between h-full">
-          <div className="max-w-xl">
-            <h1 className="text-5xl lg:text-6xl font-light text-[#0B132B] dark:text-white mb-6 leading-tight transition-colors">Industry Solutions We Offer</h1>
-            <p className="text-lg text-slate-600 dark:text-slate-300 mb-10 leading-relaxed transition-colors">
-              Utilizing industry-specific knowledge, we&apos;re on the verge of triggering a new paradigm of changing business models and processes making them more customer-centric!
-            </p>
-            <button className="px-8 py-4 border border-[#E2E8F0] dark:border-[#2D3A54] rounded-sm text-[#0B132B] dark:text-white font-medium hover:border-[#3A86FF] dark:hover:border-[#00F5D4] hover:text-[#3A86FF] dark:hover:text-[#00F5D4] transition-all duration-300 bg-white dark:bg-transparent">
-              Schedule a free consultation
-            </button>
-          </div>
+      {/* Cyber Executive Hero Section */}
+      <section className="relative w-full py-24 md:py-32 overflow-hidden bg-[#F8FAFC] dark:bg-[#060B19] flex items-center border-b border-[#E2E8F0] dark:border-[#1C2541] transition-colors duration-300">
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none"></div>
+        <div className="absolute left-1/2 top-0 -translate-x-1/2 w-full max-w-[1200px] h-full flex justify-center pointer-events-none z-0">
+          <div className="w-[1px] h-full bg-gradient-to-b from-transparent via-[#3A86FF]/20 dark:via-[#00F5D4]/10 to-transparent"></div>
+          <div className="w-[1px] h-full bg-gradient-to-b from-transparent via-[#3A86FF]/20 dark:via-[#00F5D4]/10 to-transparent ml-[300px]"></div>
+          <div className="w-[1px] h-full bg-gradient-to-b from-transparent via-[#3A86FF]/20 dark:via-[#00F5D4]/10 to-transparent mr-[300px]"></div>
         </div>
         
-        <div className="absolute top-0 right-0 w-1/2 h-full z-0 clip-diagonal hidden lg:block bg-slate-100 dark:bg-slate-800">
-           <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
+        <div className="max-w-[1400px] mx-auto w-full px-8 lg:px-20 z-10 text-center">
+          <div className="inline-block px-4 py-1.5 rounded-sm bg-white dark:bg-[#1C2541] border border-[#E2E8F0] dark:border-[#2D3A54] text-xs font-bold tracking-wider text-[#3A86FF] dark:text-[#00F5D4] mb-8">
+            DOMAIN EXPERTISE
+          </div>
+          <h1 className="text-5xl lg:text-7xl font-bold mb-6 tracking-tight font-heading">
+            Industries We <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3A86FF] to-[#00F5D4] dark:from-[#00F5D4] dark:to-[#3A86FF]">Transform</span>
+          </h1>
+          <p className="text-lg lg:text-xl text-[#0B132B]/70 dark:text-white/60 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Architecting intelligent solutions across 24 global domains. We merge deep industry logic with elite engineering.
+          </p>
         </div>
       </section>
 
-      {/* Industries List */}
-      <section className="py-24 max-w-[1200px] mx-auto px-8">
-        <div className="flex flex-col gap-32">
+      {/* Industries Matrix */}
+      <section className="py-24 max-w-[1400px] mx-auto px-8 lg:px-20 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {industriesData.map((industry, index) => {
-            const isEven = index % 2 === 0;
-
+            const Icon = industry.icon;
             return (
-              <div key={industry.id} className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-16`}>
+              <div key={index} className="group relative bg-white dark:bg-[#111827] border border-[#E2E8F0] dark:border-[#1F2937] p-8 rounded-sm hover:border-[#3A86FF] dark:hover:border-[#00F5D4] transition-all duration-300 hover:shadow-2xl hover:shadow-[#3A86FF]/10 dark:hover:shadow-[#00F5D4]/10 overflow-hidden flex flex-col h-full">
+                {/* Background glow on hover */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#3A86FF]/10 to-transparent dark:from-[#00F5D4]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-bl-full pointer-events-none"></div>
                 
-                {/* Text Content */}
-                <div className="flex-1 w-full">
-                  <h2 className="text-3xl font-light text-slate-800 dark:text-white mb-6 transition-colors">{industry.title}</h2>
-                  <p className="text-slate-500 dark:text-slate-400 leading-relaxed text-[15px] transition-colors">
-                    {industry.description}
-                  </p>
-                </div>
-
-                {/* Image Placeholder */}
-                <div className="flex-1 w-full">
-                  <div className="w-full aspect-[16/9] bg-slate-100 dark:bg-slate-800 rounded shadow-sm overflow-hidden relative transition-colors duration-300 border border-gray-100 dark:border-gray-800">
-                     <img src={industry.image} alt={industry.title} className="w-full h-full object-cover" />
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-3 bg-[#F4F7FA] dark:bg-[#1C2541] rounded-sm text-[#3A86FF] dark:text-[#00F5D4] group-hover:bg-[#3A86FF] group-hover:text-white dark:group-hover:bg-[#00F5D4] dark:group-hover:text-[#0B132B] transition-colors duration-300">
+                    <Icon size={24} strokeWidth={1.5} />
                   </div>
+                  <h3 className="text-xl font-bold font-heading">{industry.category}</h3>
                 </div>
-
+                
+                <div className="flex flex-col gap-3 mt-2 flex-grow">
+                  {industry.items.map((sub, idx) => (
+                    <Link 
+                      key={idx} 
+                      href={`/industries/${generateIndustrySlug(sub)}`}
+                      className="group/link flex items-center gap-2 text-[15px] text-[#0B132B]/70 dark:text-white/70 hover:text-[#3A86FF] dark:hover:text-[#00F5D4] transition-all duration-300"
+                    >
+                      <ArrowRight size={14} className="opacity-0 -ml-4 group-hover/link:opacity-100 group-hover/link:ml-0 transition-all duration-300" />
+                      <span className="group-hover/link:translate-x-1 transition-transform duration-300">{sub}</span>
+                    </Link>
+                  ))}
+                </div>
               </div>
             );
           })}

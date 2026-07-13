@@ -5,18 +5,24 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { useTheme } from "./ThemeProvider";
 import { servicesData, generateSlug } from "../data/services";
+import { industriesData, generateSlug as generateIndustrySlug } from "../data/industries";
 
 export default function Navbar() {
   const pathname = usePathname();
   const { theme, toggleTheme, mounted } = useTheme();
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const industriesDropdownRef = useRef(null);
 
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsServicesOpen(false);
+      }
+      if (industriesDropdownRef.current && !industriesDropdownRef.current.contains(event.target)) {
+        setIsIndustriesOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -26,6 +32,7 @@ export default function Navbar() {
   // Close dropdown on route change
   useEffect(() => {
     setIsServicesOpen(false);
+    setIsIndustriesOpen(false);
   }, [pathname]);
 
   const linkClass = (path) =>
@@ -44,7 +51,7 @@ export default function Navbar() {
         <Link href="/about" className={linkClass("/about")}>About</Link>
         
         {/* Services Mega Menu */}
-        <div className="relative" ref={dropdownRef}>
+        <div ref={dropdownRef}>
           <button 
             onClick={() => setIsServicesOpen(!isServicesOpen)}
             className={`flex items-center gap-1 hover:text-[#3A86FF] dark:hover:text-[#00F5D4] transition-colors focus:outline-none ${pathname.startsWith('/services_pg') ? 'text-[#3A86FF] dark:text-[#00F5D4] font-semibold' : ''}`}
@@ -52,9 +59,9 @@ export default function Navbar() {
             Services <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform duration-300 ${isServicesOpen ? "rotate-180" : ""}`}><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           
-          <div className={`absolute top-full left-1/2 -translate-x-1/2 pt-4 transition-all duration-300 z-50 ${isServicesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"}`}>
-            <div className="bg-white dark:bg-[#1C2541] border border-[#E2E8F0] dark:border-[#2D3A54] shadow-2xl rounded-sm p-6 md:p-8 w-[90vw] md:w-[900px] max-w-[1200px] max-h-[80vh] overflow-y-auto flex flex-col">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-10">
+          <div className={`absolute top-full left-0 w-full pt-4 transition-all duration-300 z-50 ${isServicesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"}`}>
+            <div className="mx-auto w-full max-w-7xl bg-white dark:bg-[#1C2541] border border-[#E2E8F0] dark:border-[#2D3A54] shadow-2xl rounded-b-sm p-6 md:p-8 max-h-[75vh] md:max-h-[calc(100vh-100px)] overflow-y-auto mega-scroll flex flex-col">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {servicesData.map((category, idx) => {
                   const Icon = category.icon;
                   return (
@@ -93,9 +100,57 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        <Link href="/industries" className={linkClass("/industries")}>Industries</Link>
-        <Link href="#" className="hover:text-[#3A86FF] dark:hover:text-[#00F5D4] transition-colors">Products</Link>
-        <Link href="#" className="hover:text-[#3A86FF] dark:hover:text-[#00F5D4] transition-colors">Resources</Link>
+
+        {/* Industries Mega Menu */}
+        <div ref={industriesDropdownRef}>
+          <button 
+            onClick={() => setIsIndustriesOpen(!isIndustriesOpen)}
+            className={`flex items-center gap-1 hover:text-[#3A86FF] dark:hover:text-[#00F5D4] transition-colors focus:outline-none ${pathname.startsWith('/industries') ? 'text-[#3A86FF] dark:text-[#00F5D4] font-semibold' : ''}`}
+          >
+            Industries <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform duration-300 ${isIndustriesOpen ? "rotate-180" : ""}`}><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          
+          <div className={`absolute top-full left-0 w-full pt-4 transition-all duration-300 z-50 ${isIndustriesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"}`}>
+            <div className="mx-auto w-full max-w-7xl bg-white dark:bg-[#1C2541] border border-[#E2E8F0] dark:border-[#2D3A54] shadow-2xl rounded-b-sm p-6 md:p-8 max-h-[75vh] md:max-h-[calc(100vh-100px)] overflow-y-auto mega-scroll flex flex-col">
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                {industriesData.map((category, idx) => {
+                  const Icon = category.icon;
+                  return (
+                    <div key={idx} className="flex flex-col">
+                      <div className="flex items-center gap-2 mb-4 text-[#3A86FF] dark:text-[#00F5D4]">
+                        <Icon size={18} />
+                        <h4 className="font-bold text-sm text-[#0B132B] dark:text-white truncate">{category.category}</h4>
+                      </div>
+                      <div className="flex flex-col gap-2">
+                        {category.items.slice(0, 5).map((item, i) => (
+                          <Link 
+                            key={i} 
+                            href={`/industries/${generateIndustrySlug(item)}`} 
+                            className="text-xs text-[#0B132B]/70 dark:text-white/60 hover:text-[#3A86FF] dark:hover:text-[#00F5D4] transition-colors relative group/link inline-block w-fit truncate max-w-full"
+                          >
+                            {item}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="w-full bg-[#F4F7FA] dark:bg-[#0B132B] p-4 mt-8 rounded-sm border border-[#E2E8F0] dark:border-[#2D3A54] flex justify-between items-center shrink-0">
+                 <div>
+                    <h4 className="font-bold text-[#0B132B] dark:text-white text-sm">Need a specialized industry solution?</h4>
+                    <p className="text-xs text-[#0B132B]/60 dark:text-white/50 mt-1">Our domain experts are ready to assist you.</p>
+                 </div>
+                 <Link href="/industries" className="px-4 py-2 bg-[#3A86FF] dark:bg-[#00F5D4] text-white dark:text-[#0B132B] text-xs font-bold rounded-sm hover:opacity-90 transition-opacity">
+                    View All Industries
+                 </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <Link href="/products" className={linkClass("/products")}>Products</Link>
+        <Link href="/resources" className={linkClass("/resources")}>Resources</Link>
         <div className="relative group">
           <Link href="/events" className={`flex items-center gap-1 hover:text-[#3A86FF] dark:hover:text-[#00F5D4] transition-colors ${pathname === '/events' ? 'text-[#3A86FF] dark:text-[#00F5D4] font-semibold' : ''}`}>
             Events <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:rotate-180 transition-transform"><polyline points="6 9 12 15 18 9"></polyline></svg>
