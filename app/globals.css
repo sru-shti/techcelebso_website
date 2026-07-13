@@ -1,21 +1,28 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Base & Typography */
+/* ═══ Antellay Design System ═══ */
 :root {
-  --primary-color: #ea580c;
-  /* Deep purple from footer */
-  --accent-yellow: #fecb6e;
-  /* Yellow from button */
-  --text-main: #333;
-  --text-light: #777;
-  --bg-light: #fdfdfd;
+  --primary-color: #3A86FF;
+  /* Electric royal blue */
+  --accent-secondary: #2563EB;
+  --accent-teal: #00F5D4;
+  --accent-ice: #70EEFF;
+  --text-main: #0B132B;
+  /* Deep space navy */
+  --text-light: #64748B;
+  --bg-light: #FFFFFF;
+  --bg-secondary: #F4F7FA;
+  --border-color: #E2E8F0;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
 }
 
 body {
   background-color: var(--bg-light);
   color: var(--text-main);
   overflow-x: hidden;
+  font-family: var(--font-body);
 }
 
 html {
@@ -31,51 +38,57 @@ a {
   text-align: center;
 }
 
-/* Utilities */
+/* Headings use Space Grotesk */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* ═══ Utility Buttons ═══ */
 .btn {
   padding: 10px 24px;
-  border-radius: 6px;
-  font-weight: 500;
+  border-radius: 2px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
+  font-family: var(--font-body);
 }
 
 .btn-outline {
   background: transparent;
-  border: 1px solid #d1d5db;
-  /* Lighter gray border */
-  color: #333;
-  border-radius: 4px;
-  /* Less rounded */
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: 2px;
   padding: 10px 20px;
   font-size: 14px;
 }
 
 .btn-outline:hover {
-  background: #f9fafb;
+  background: var(--bg-secondary);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .btn-yellow {
-  background: var(--accent-yellow);
-  color: #333;
+  background: var(--primary-color);
+  color: white;
   font-weight: 600;
 }
 
 .btn-yellow:hover {
-  filter: brightness(1.05);
+  filter: brightness(1.1);
   transform: translateY(-2px);
 }
 
-.btn-orange-outline {
+.btn-accent-outline {
   background: transparent;
-  border: 2px solid #5de4c7;
+  border: 2px solid var(--accent-teal);
   color: white;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
-.btn-orange-outline:hover {
-  background: rgba(93, 228, 199, 0.1);
+.btn-accent-outline:hover {
+  background: rgba(0, 245, 212, 0.1);
 }
 
 
@@ -85,7 +98,6 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 20px 5%;
-  background: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
@@ -106,17 +118,6 @@ a {
   display: flex;
   gap: 25px;
   align-items: center;
-}
-
-.nav-links a {
-  font-size: 13px;
-  font-weight: 400;
-  color: #333;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover {
-  color: #000;
 }
 
 .dropdown {

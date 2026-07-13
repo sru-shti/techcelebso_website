@@ -60,17 +60,17 @@ export default function CareersPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-white dark:bg-[#020617] transition-colors duration-300">
+    <main className="min-h-screen bg-white dark:bg-[#0B132B] transition-colors duration-300">
       
       {/* 1. Hero Header & Dynamic Core Values Carousel */}
-      <section className="relative w-full pt-32 pb-24 overflow-hidden border-b border-gray-100 dark:border-gray-800">
-        <div className="absolute inset-0 bg-gradient-to-b from-orange-50/50 to-white dark:from-blue-900/10 dark:to-[#020617] -z-10"></div>
+      <section className="relative w-full pt-32 pb-24 overflow-hidden border-b border-[#E2E8F0] dark:border-[#1C2541]">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#3A86FF]/5 to-white dark:from-[#3A86FF]/5 dark:to-[#0B132B] -z-10"></div>
         <div className="max-w-[1400px] mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           <div className="flex flex-col z-10">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4 transition-all duration-500 leading-none">
               {coreValues[activeValue].split(" ").map((word, i) => (
-                 <span key={i} className={word === "People" ? "text-transparent bg-clip-text bg-gradient-to-r from-[#ea580c] to-amber-500 dark:from-blue-400 dark:to-cyan-400" : ""}>
+                 <span key={i} className={word === "People" ? "text-transparent bg-clip-text bg-gradient-to-r from-[#3A86FF] to-[#70EEFF] dark:from-[#00F5D4] dark:to-[#70EEFF]" : ""}>
                    {word}{" "}
                  </span>
               ))}
@@ -79,10 +79,10 @@ export default function CareersPage() {
                Join a team of visionaries, builders, and creators. We are constantly pushing the boundaries of what is possible in the cloud space.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#openings" className="bg-[#ea580c] dark:bg-blue-600 hover:bg-[#c2410c] dark:hover:bg-blue-500 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-orange-500/30 dark:hover:shadow-blue-500/30 transform hover:-translate-y-1">
+              <a href="#openings" className="bg-[#3A86FF] dark:bg-[#00F5D4] hover:bg-[#2563EB] dark:hover:bg-[#00F5D4]/80 text-white dark:text-[#0B132B] px-8 py-4 rounded-sm font-bold transition-all shadow-lg hover:shadow-[#3A86FF]/30 dark:hover:shadow-[#00F5D4]/30 transform hover:-translate-y-1">
                 View Openings
               </a>
-              <Link href="/about" className="bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white px-8 py-4 rounded-full font-bold transition-colors">
+              <Link href="/about" className="bg-[#F4F7FA] dark:bg-[#1C2541] hover:bg-[#E2E8F0] dark:hover:bg-[#2D3A54] text-[#0B132B] dark:text-white px-8 py-4 rounded-sm font-bold transition-colors">
                 Learn About Us
               </Link>
             </div>
@@ -101,16 +101,16 @@ export default function CareersPage() {
                 ))}
              </div>
              {/* Decorative orbit ring */}
-             <div className="absolute -inset-8 border border-orange-200/50 dark:border-blue-500/30 rounded-full animate-[spin_30s_linear_infinite] pointer-events-none"></div>
-             <div className="absolute -inset-16 border border-gray-100 dark:border-gray-800 rounded-full animate-[spin_45s_linear_infinite_reverse] pointer-events-none"></div>
+             <div className="absolute -inset-8 border border-[#3A86FF]/30 dark:border-[#00F5D4]/20 rounded-full animate-[spin_30s_linear_infinite] pointer-events-none"></div>
+             <div className="absolute -inset-16 border border-[#E2E8F0] dark:border-[#1C2541] rounded-full animate-[spin_45s_linear_infinite_reverse] pointer-events-none"></div>
           </div>
         </div>
       </section>
 
       {/* 2. The Orbital Orbit Perks Navigator */}
-      <section className="py-32 bg-slate-50 dark:bg-[#0f172a] relative overflow-hidden">
+      <section className="py-32 bg-[#F4F7FA] dark:bg-[#0B132B] relative overflow-hidden">
          <div className="text-center mb-16 relative z-10">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Life at CelebsoX</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0B132B] dark:text-white mb-4">Life at Antellay</h2>
             <p className="text-lg text-slate-600 dark:text-slate-400">Everything you need to do the best work of your life.</p>
          </div>
 
@@ -118,8 +118,8 @@ export default function CareersPage() {
          <div className="relative w-full max-w-[600px] lg:max-w-[800px] h-[400px] lg:h-[700px] mx-auto flex items-center justify-center mt-10">
             
             {/* The Central Hub */}
-            <div className="relative z-20 w-64 h-64 lg:w-96 lg:h-96 bg-white dark:bg-[#1e293b] rounded-full shadow-2xl border border-gray-100 dark:border-gray-800 flex flex-col items-center justify-center p-6 lg:p-12 text-center transition-all duration-500 transform hover:scale-105">
-               <div className="text-[#ea580c] dark:text-blue-400 mb-4 scale-110 lg:scale-150 transition-transform">
+            <div className="relative z-20 w-64 h-64 lg:w-96 lg:h-96 bg-white dark:bg-[#1C2541] rounded-full shadow-2xl border border-[#E2E8F0] dark:border-[#2D3A54] flex flex-col items-center justify-center p-6 lg:p-12 text-center transition-all duration-500 transform hover:scale-105">
+               <div className="text-[#3A86FF] dark:text-[#00F5D4] mb-4 scale-110 lg:scale-150 transition-transform">
                  {orbitNodes[activeOrbitNode].icon}
                </div>
                <h3 className="text-xl lg:text-3xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">{orbitNodes[activeOrbitNode].title}</h3>
@@ -141,7 +141,7 @@ export default function CareersPage() {
                    <button 
                      key={i}
                      onClick={() => setActiveOrbitNode(i)}
-                     className={`absolute top-1/2 left-1/2 w-12 h-12 lg:w-16 lg:h-16 -ml-6 -mt-6 lg:-ml-8 lg:-mt-8 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${activeOrbitNode === i ? 'bg-[#ea580c] dark:bg-blue-600 text-white scale-125 z-30 ring-4 ring-orange-100 dark:ring-blue-900' : 'bg-white dark:bg-slate-800 text-slate-400 dark:text-slate-500 hover:bg-orange-50 dark:hover:bg-blue-900/30 hover:text-[#ea580c] dark:hover:text-blue-400 border border-gray-200 dark:border-gray-700 z-10'}`}
+                     className={`absolute top-1/2 left-1/2 w-12 h-12 lg:w-16 lg:h-16 -ml-6 -mt-6 lg:-ml-8 lg:-mt-8 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${activeOrbitNode === i ? 'bg-[#3A86FF] dark:bg-[#00F5D4] text-white dark:text-[#0B132B] scale-125 z-30 ring-4 ring-[#3A86FF]/20 dark:ring-[#00F5D4]/20' : 'bg-white dark:bg-[#1C2541] text-[#0B132B]/40 dark:text-white/40 hover:bg-[#3A86FF]/10 dark:hover:bg-[#00F5D4]/10 hover:text-[#3A86FF] dark:hover:text-[#00F5D4] border border-[#E2E8F0] dark:border-[#2D3A54] z-10'}`}
                      style={{ 
                         transform: `rotate(${-angle}rad) translateX(50vw) rotate(${angle}rad) rotate(${-activeOrbitNode * (360 / orbitNodes.length)}deg)`, // Fallback
                         // More robust CSS transform using percentages:
@@ -177,7 +177,7 @@ export default function CareersPage() {
                  placeholder="Search jobs by title..." 
                  value={searchQuery}
                  onChange={(e) => setSearchQuery(e.target.value)}
-                 className="w-full bg-slate-50 dark:bg-slate-900 border border-gray-200 dark:border-gray-700 text-slate-900 dark:text-white rounded-full pl-14 pr-6 py-4 focus:outline-none focus:border-[#ea580c] dark:focus:border-blue-500 transition-colors shadow-sm"
+                 className="w-full bg-[#F4F7FA] dark:bg-[#0B132B] border border-[#E2E8F0] dark:border-[#2D3A54] text-[#0B132B] dark:text-white rounded-sm pl-14 pr-6 py-4 focus:outline-none focus:border-[#3A86FF] dark:focus:border-[#00F5D4] transition-colors"
                />
             </div>
          </div>
@@ -188,7 +188,7 @@ export default function CareersPage() {
               <button 
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all ${activeTab === tab ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 shadow-md scale-105' : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'}`}
+                className={`px-6 py-2.5 rounded-sm text-sm font-bold transition-all ${activeTab === tab ? 'bg-[#0B132B] dark:bg-white text-white dark:text-[#0B132B] shadow-md scale-105' : 'bg-[#F4F7FA] dark:bg-[#1C2541] text-[#0B132B]/50 dark:text-white/40 hover:bg-[#E2E8F0] dark:hover:bg-[#2D3A54]'}`}
               >
                 {tab}
               </button>
@@ -198,23 +198,23 @@ export default function CareersPage() {
          {/* Job Grid */}
          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredJobs.length > 0 ? filteredJobs.map((job, i) => (
-               <div key={i} className="group bg-white dark:bg-[#1e293b] rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden cursor-pointer">
+               <div key={i} className="group bg-white dark:bg-[#1C2541] rounded-sm p-8 border border-[#E2E8F0] dark:border-[#2D3A54] shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 relative overflow-hidden cursor-pointer">
                   {/* Gradient Indicator Border */}
-                  <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#ea580c] to-amber-400 dark:from-blue-500 dark:to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#3A86FF] to-[#70EEFF] dark:from-[#00F5D4] dark:to-[#70EEFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
                   <div className="flex justify-between items-start mb-6">
-                     <div className="bg-orange-50 dark:bg-blue-900/30 text-[#ea580c] dark:text-blue-400 px-3 py-1 rounded text-xs font-bold uppercase tracking-wider">
+                     <div className="bg-[#3A86FF]/10 dark:bg-[#00F5D4]/10 text-[#3A86FF] dark:text-[#00F5D4] px-3 py-1 rounded-sm text-xs font-bold uppercase tracking-wider">
                        {job.dept}
                      </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 group-hover:text-[#ea580c] dark:group-hover:text-blue-400 transition-colors">{job.title}</h3>
-                  <div className="grid grid-cols-2 gap-4 text-sm text-slate-500 dark:text-slate-400 mb-8">
+                  <h3 className="text-2xl font-bold text-[#0B132B] dark:text-white mb-6 group-hover:text-[#3A86FF] dark:group-hover:text-[#00F5D4] transition-colors">{job.title}</h3>
+                  <div className="grid grid-cols-2 gap-4 text-sm text-[#0B132B]/50 dark:text-white/40 mb-8">
                      <div className="flex items-center gap-2 font-medium"><Briefcase size={16} className="text-gray-400"/> {job.type}</div>
                      <div className="flex items-center gap-2 font-medium"><MapPin size={16} className="text-gray-400"/> {job.loc}</div>
                      <div className="flex items-center gap-2 font-medium"><CheckCircle2 size={16} className="text-gray-400"/> {job.exp}</div>
                   </div>
-                  <div className="pt-6 border-t border-gray-100 dark:border-gray-700 flex justify-end">
-                     <span className="text-[#ea580c] dark:text-blue-400 font-bold group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-2">Apply Now <span className="text-xl">→</span></span>
+                  <div className="pt-6 border-t border-[#E2E8F0] dark:border-[#2D3A54] flex justify-end">
+                     <span className="text-[#3A86FF] dark:text-[#00F5D4] font-bold group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-2">Apply Now <span className="text-xl">→</span></span>
                   </div>
                </div>
             )) : (
@@ -223,8 +223,8 @@ export default function CareersPage() {
          </div>
       </section>
 
-      {/* 4 & 5. Humans of CelebsoX & Scattered Gallery */}
-      <section className="py-32 bg-slate-50 dark:bg-[#0f172a] overflow-hidden relative">
+      {/* 4 & 5. Humans of Antellay & Scattered Gallery */}
+      <section className="py-32 bg-[#F4F7FA] dark:bg-[#0B132B] overflow-hidden relative">
          <div className="max-w-[1400px] mx-auto px-8">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 text-center">Our Daily Vibe</h2>
             <p className="text-center text-slate-600 dark:text-slate-400 mb-20 text-lg">A sneak peek into the life, culture, and chaos of building the future.</p>
@@ -245,7 +245,7 @@ export default function CareersPage() {
                <div className="absolute z-30 hover:z-50 -rotate-2 hover:rotate-0 hover:scale-110 transition-all duration-500 shadow-2xl border-8 border-white dark:border-slate-800 rounded-lg overflow-hidden w-80 h-72 md:w-[450px] md:h-80 left-[50%] -translate-x-1/2 top-[20%] bg-slate-900 group cursor-pointer">
                   <img src="/images/celebso_logo.png" className="w-full h-full object-contain p-8 opacity-40 group-hover:opacity-20 transition-all" alt="Video Thumb"/>
                   <div className="absolute inset-0 flex items-center justify-center">
-                     <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#ea580c]/80 dark:group-hover:bg-blue-600/80 transition-all duration-300 shadow-2xl">
+                     <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#3A86FF]/80 dark:group-hover:bg-[#00F5D4]/80 transition-all duration-300 shadow-2xl">
                         <Play size={36} className="text-white fill-white ml-2" />
                      </div>
                   </div>
@@ -266,7 +266,7 @@ export default function CareersPage() {
       </section>
 
       {/* 6. Giant Text Video Mask Section */}
-      <section className="relative w-full h-[50vh] md:h-[70vh] bg-white dark:bg-[#020617] flex items-center justify-center overflow-hidden border-y border-gray-100 dark:border-gray-900 pointer-events-none">
+      <section className="relative w-full h-[50vh] md:h-[70vh] bg-white dark:bg-[#0B132B] flex items-center justify-center overflow-hidden border-y border-[#E2E8F0] dark:border-[#1C2541] pointer-events-none">
          <h2 
            className="text-[20vw] md:text-[18vw] font-black tracking-tighter text-transparent bg-clip-text leading-none select-none z-10 px-4 text-center w-full"
            style={{
@@ -277,7 +277,7 @@ export default function CareersPage() {
              WebkitTextFillColor: "transparent"
            }}
          >
-            CELEBSOX
+            ANTELLAY
          </h2>
          <div className="absolute bottom-10 right-10 text-xs md:text-sm font-bold text-slate-400 dark:text-slate-600 uppercase tracking-[0.5em] z-20">
             Design for People
@@ -292,15 +292,15 @@ export default function CareersPage() {
         </div>
         <div className="flex flex-col gap-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-white dark:bg-[#1e293b] rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
+            <div key={index} className="bg-white dark:bg-[#1C2541] rounded-sm shadow-sm border border-[#E2E8F0] dark:border-[#2D3A54] overflow-hidden">
               <button 
                 onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
-                className="w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
+                className="w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none hover:bg-[#F4F7FA] dark:hover:bg-[#0B132B]/50 transition-colors"
               >
                 <span className="font-bold text-lg text-slate-800 dark:text-white pr-4">
                   {faq.q}
                 </span>
-                <div className={`w-10 h-10 rounded-full bg-orange-100 dark:bg-blue-900/40 flex items-center justify-center text-[#ea580c] dark:text-blue-400 shrink-0 transition-transform duration-300 shadow-inner ${openFaq === index ? "rotate-45" : ""}`}>
+                <div className={`w-10 h-10 rounded-sm bg-[#3A86FF]/10 dark:bg-[#00F5D4]/10 flex items-center justify-center text-[#3A86FF] dark:text-[#00F5D4] shrink-0 transition-transform duration-300 ${openFaq === index ? "rotate-45" : ""}`}>
                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                 </div>
               </button>

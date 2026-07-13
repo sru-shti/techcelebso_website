@@ -8,7 +8,7 @@ const SocialIcon = ({ type }) => {
     case "facebook":
       return <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>;
     case "twitter":
-      return <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>; // X logo approx
+      return <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>;
     case "instagram":
       return <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>;
     case "linkedin":
@@ -22,7 +22,7 @@ const SocialIcon = ({ type }) => {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0f0c1b] text-white pt-20 pb-8 w-full z-10 relative">
+    <footer className="bg-[#0B132B] text-white pt-20 pb-8 w-full z-10 relative">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-20">
         
         {/* Main Footer Grid */}
@@ -31,67 +31,69 @@ export default function Footer() {
           {/* Column 1: Brand & Newsletter */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-8">
-               <img src="/images/celebso_logo.png" alt="Celebso Logo" className="h-10 w-auto cursor-pointer brightness-0 invert" />
+               <span className="text-3xl font-black tracking-tight font-[family-name:var(--font-heading)] text-white select-none">
+                 <span className="text-[#00F5D4]">Λ</span>NTELLAY
+               </span>
             </Link>
             
-            <div className="bg-[#1e293b] p-6 rounded-lg mb-8 border border-gray-800">
+            <div className="bg-[#1C2541] p-6 rounded-sm mb-8 border border-[#2D3A54]">
               <h3 className="font-semibold text-lg mb-4">Subscribe To Our Newsletter for latest business insights!</h3>
               <form className="flex flex-col gap-4">
                 <div className="flex gap-4">
-                  <input type="text" placeholder="Name *" className="bg-transparent border-b border-gray-600 pb-2 flex-1 focus:outline-none focus:border-white text-sm transition-colors" required />
-                  <input type="email" placeholder="Email *" className="bg-transparent border-b border-gray-600 pb-2 flex-1 focus:outline-none focus:border-white text-sm transition-colors" required />
+                  <input type="text" placeholder="Name *" className="bg-transparent border-b border-[#2D3A54] pb-2 flex-1 focus:outline-none focus:border-[#00F5D4] text-sm transition-colors" required />
+                  <input type="email" placeholder="Email *" className="bg-transparent border-b border-[#2D3A54] pb-2 flex-1 focus:outline-none focus:border-[#00F5D4] text-sm transition-colors" required />
                 </div>
-                <button type="submit" className="w-full mt-2 py-3 border border-gray-600 hover:bg-white hover:text-[#0f0c1b] transition-colors rounded text-sm font-semibold">
+                <button type="submit" className="w-full mt-2 py-3 border border-[#2D3A54] hover:bg-[#00F5D4] hover:text-[#0B132B] hover:border-[#00F5D4] transition-all duration-300 rounded-sm text-sm font-semibold">
                   Sign Up
                 </button>
               </form>
             </div>
             
-            <div className="flex items-center gap-4 text-gray-400">
-              <a href="#" className="hover:text-white transition-colors"><SocialIcon type="facebook" /></a>
-              <a href="#" className="hover:text-white transition-colors"><SocialIcon type="twitter" /></a>
-              <a href="#" className="hover:text-white transition-colors"><SocialIcon type="instagram" /></a>
-              <a href="#" className="hover:text-white transition-colors"><SocialIcon type="linkedin" /></a>
-              <a href="#" className="hover:text-white transition-colors"><SocialIcon type="youtube" /></a>
+            <div className="flex items-center gap-4 text-[#2D3A54]">
+              <a href="#" className="hover:text-[#00F5D4] transition-colors duration-200"><SocialIcon type="facebook" /></a>
+              <a href="#" className="hover:text-[#00F5D4] transition-colors duration-200"><SocialIcon type="twitter" /></a>
+              <a href="#" className="hover:text-[#00F5D4] transition-colors duration-200"><SocialIcon type="instagram" /></a>
+              <a href="#" className="hover:text-[#00F5D4] transition-colors duration-200"><SocialIcon type="linkedin" /></a>
+              <a href="#" className="hover:text-[#00F5D4] transition-colors duration-200"><SocialIcon type="youtube" /></a>
             </div>
           </div>
 
           {/* Column 2: Services */}
           <div>
-            <h3 className="text-xl font-medium mb-6 text-gray-300">Services</h3>
-            <ul className="flex flex-col gap-4 text-sm text-gray-400">
-              <li><Link href="#" className="hover:text-white transition-colors flex items-center justify-between group">Salesforce <span className="text-gray-600 group-hover:text-white transition-colors">v</span></Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors flex items-center justify-between group">Cloud <span className="text-gray-600 group-hover:text-white transition-colors">v</span></Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors flex items-center justify-between group">AWS <span className="text-gray-600 group-hover:text-white transition-colors">v</span></Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors flex items-center justify-between group">GCP <span className="text-gray-600 group-hover:text-white transition-colors">v</span></Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors flex items-center justify-between group">ServiceNow <span className="text-gray-600 group-hover:text-white transition-colors">v</span></Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors flex items-center justify-between group">Additional <span className="text-gray-600 group-hover:text-white transition-colors">v</span></Link></li>
+            <h3 className="text-xl font-medium mb-6 text-white/60 font-[family-name:var(--font-heading)]">Services</h3>
+            <ul className="flex flex-col gap-4 text-sm text-white/40">
+              <li><Link href="#" className="hover:text-[#00F5D4] transition-colors flex items-center justify-between group">Salesforce <span className="text-white/20 group-hover:text-[#00F5D4] transition-colors">›</span></Link></li>
+              <li><Link href="#" className="hover:text-[#00F5D4] transition-colors flex items-center justify-between group">Cloud <span className="text-white/20 group-hover:text-[#00F5D4] transition-colors">›</span></Link></li>
+              <li><Link href="#" className="hover:text-[#00F5D4] transition-colors flex items-center justify-between group">AWS <span className="text-white/20 group-hover:text-[#00F5D4] transition-colors">›</span></Link></li>
+              <li><Link href="#" className="hover:text-[#00F5D4] transition-colors flex items-center justify-between group">GCP <span className="text-white/20 group-hover:text-[#00F5D4] transition-colors">›</span></Link></li>
+              <li><Link href="#" className="hover:text-[#00F5D4] transition-colors flex items-center justify-between group">ServiceNow <span className="text-white/20 group-hover:text-[#00F5D4] transition-colors">›</span></Link></li>
+              <li><Link href="#" className="hover:text-[#00F5D4] transition-colors flex items-center justify-between group">Additional <span className="text-white/20 group-hover:text-[#00F5D4] transition-colors">›</span></Link></li>
             </ul>
           </div>
 
           {/* Column 3: Products */}
           <div>
-            <h3 className="text-xl font-medium mb-6 text-gray-300">Products</h3>
-            <ul className="flex flex-col gap-4 text-sm text-gray-400">
-              <li><Link href="#" className="hover:text-white transition-colors">ChargeOn</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Easy Incentivizer</Link></li>
+            <h3 className="text-xl font-medium mb-6 text-white/60 font-[family-name:var(--font-heading)]">Products</h3>
+            <ul className="flex flex-col gap-4 text-sm text-white/40">
+              <li><Link href="#" className="hover:text-[#00F5D4] transition-colors">ChargeOn</Link></li>
+              <li><Link href="#" className="hover:text-[#00F5D4] transition-colors">Easy Incentivizer</Link></li>
             </ul>
           </div>
 
           {/* Column 4: Resources & Instagram */}
           <div>
-            <h3 className="text-xl font-medium mb-6 text-gray-300">Resources</h3>
-            <ul className="flex flex-col gap-4 text-sm text-gray-400 mb-8">
-              <li><Link href="#" className="hover:text-white transition-colors">Blogs</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Webinar</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Customer Success Story</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Case Studies</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Podcast</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Press Release</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">ROI Calculator</Link></li>
+            <h3 className="text-xl font-medium mb-6 text-white/60 font-[family-name:var(--font-heading)]">Resources</h3>
+            <ul className="flex flex-col gap-4 text-sm text-white/40 mb-8">
+              <li><Link href="#" className="hover:text-[#00F5D4] transition-colors">Blogs</Link></li>
+              <li><Link href="#" className="hover:text-[#00F5D4] transition-colors">Webinar</Link></li>
+              <li><Link href="#" className="hover:text-[#00F5D4] transition-colors">Customer Success Story</Link></li>
+              <li><Link href="#" className="hover:text-[#00F5D4] transition-colors">Case Studies</Link></li>
+              <li><Link href="#" className="hover:text-[#00F5D4] transition-colors">Podcast</Link></li>
+              <li><Link href="#" className="hover:text-[#00F5D4] transition-colors">Press Release</Link></li>
+              <li><Link href="#" className="hover:text-[#00F5D4] transition-colors">ROI Calculator</Link></li>
             </ul>
             
-            <h3 className="text-lg font-medium mb-4 text-gray-300">Instagram</h3>
+            <h3 className="text-lg font-medium mb-4 text-white/60 font-[family-name:var(--font-heading)]">Instagram</h3>
             <div className="grid grid-cols-2 gap-2">
               {[
                 "/images/instagram_page/OIP.webp",
@@ -99,7 +101,7 @@ export default function Footer() {
                 "/images/instagram_page/download.webp",
                 "/images/instagram_page/th.webp"
               ].map((imgSrc, i) => (
-                <div key={i} className="aspect-square bg-[#221c3d] rounded overflow-hidden border border-gray-800">
+                <div key={i} className="aspect-square bg-[#1C2541] rounded-sm overflow-hidden border border-[#2D3A54]">
                   <img src={imgSrc} alt="Instagram Post" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300 cursor-pointer" />
                 </div>
               ))}
@@ -108,18 +110,18 @@ export default function Footer() {
         </div>
 
         {/* Footer Base Bar */}
-        <div className="border-t border-gray-800 pt-8 mt-12 flex flex-col lg:flex-row items-center justify-between gap-6 text-xs text-gray-500">
+        <div className="border-t border-[#1C2541] pt-8 mt-12 flex flex-col lg:flex-row items-center justify-between gap-6 text-xs text-white/30">
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-            <p>©2026 CelebsoX Labs Pvt. Ltd. All Rights Reserved</p>
+            <p>©2026 Antellay Technologies Pvt. Ltd. All Rights Reserved</p>
             <p>ISO 27001:2022 Certified</p>
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Terms & Conditions</Link>
+            <Link href="#" className="hover:text-[#00F5D4] transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-[#00F5D4] transition-colors">Terms & Conditions</Link>
           </div>
           <div className="flex items-center gap-4">
              {/* Placeholders for partner badges */}
-             <div className="px-3 py-1 bg-green-900/40 text-green-400 border border-green-800/50 rounded font-bold tracking-wider">DMCA PROTECTED</div>
-             <div className="w-10 h-10 bg-blue-900/30 rounded flex items-center justify-center border border-blue-800/50">
-               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+             <div className="px-3 py-1 bg-[#00F5D4]/10 text-[#00F5D4] border border-[#00F5D4]/20 rounded-sm font-bold tracking-wider">DMCA PROTECTED</div>
+             <div className="w-10 h-10 bg-[#3A86FF]/10 rounded-sm flex items-center justify-center border border-[#3A86FF]/20">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3A86FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
              </div>
           </div>
         </div>

@@ -21,7 +21,7 @@ export default function Home() {
     {
       name: "Cameron Billings",
       title: "CTO, placesforless",
-      quote: "We enjoyed working with Cyntexa Labs. They were easy to communicate with and easy to work with.",
+      quote: "We enjoyed working with Antellay. They were easy to communicate with and easy to work with.",
       img: "/images/client_photo/download.webp"
     }
   ];
@@ -30,15 +30,15 @@ export default function Home() {
   const handleNext = () => setCurrentTestimonial(prev => (prev === testimonials.length - 1 ? 0 : prev + 1));
 
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-900">
+    <main className="min-h-screen bg-white dark:bg-[#0B132B] text-[#0B132B] dark:text-white transition-colors duration-300">
 
 
       {/* Hero Section */}
       <section id="about" className="hero-section">
         <div className="hero-top-text">
-          <p>With Cyntexa you're not just expanding your team, you're augmenting your capabilities. Let's join forces to create a future that's not just possible, but inevitable.</p>
+          <p>With Antellay you're not just expanding your team, you're augmenting your capabilities. Let's join forces to create a future that's not just possible, but inevitable.</p>
         </div>
-        <h1 className="hero-title">CelebsoX.</h1>
+        <h1 className="hero-title">Antellay</h1>
         <p className="hero-subtitle">IT solutions & services company.</p>
 
         <div id="industries" className="client-logos">
@@ -54,7 +54,7 @@ export default function Home() {
       <section id="resources" className="leading-charge">
         <div className="leading-left-panel">
           <h2>Leading the Charge in IT<br />Consulting & Services</h2>
-          <h3 className="welcome-text">Welcome to CelebsoX</h3>
+          <h3 className="welcome-text">Welcome to Antellay</h3>
         </div>
         <div className="leading-image-container">
           <div className="vr-image"></div>
@@ -72,7 +72,7 @@ export default function Home() {
       {/* Trusted Partner Section */}
       <section id="events" className="trusted-partner">
         <p className="partner-text">
-          CelebsoX is your trusted partner in all things IT. As a premier IT consulting company, we provide bespoke IT solutions tailored to your business ethos, requirements, and vision. Our team of experienced IT professionals is your trusted partner in steering you through your digital transformation journey, pivoting business challenges into new opportunities. With CelebsoX, success is not just a destination, it is a journey we step on with you.
+          Antellay is your trusted partner in all things IT. As a premier IT consulting company, we provide bespoke IT solutions tailored to your business ethos, requirements, and vision. Our team of experienced IT professionals is your trusted partner in steering you through your digital transformation journey, pivoting business challenges into new opportunities. With Antellay, success is not just a destination, it is a journey we step on with you.
         </p>
 
         <div className="mt-16 w-full max-w-[1200px] mx-auto">
@@ -85,7 +85,7 @@ export default function Home() {
         <div className="section-title-left">
           <h2>Tech-Adept, Business-Centric: Get To Know Us</h2>
         </div>
-        <p>Cyntexa was founded in 2018, backed by the vision of driving mutual growth with cutting-edge technologies. Our belief in mutual success has been our core ethos spurring us on the upward spiral of growth. Today, we stand on top, having grown from a startup to a trusted IT consulting company for Fortune 500 companies. Yet, we've kept our roots. We have retained a small company's agility and personal touch, ensuring personalized attention to each client.</p>
+        <p>Antellay was founded in 2018, backed by the vision of driving mutual growth with cutting-edge technologies. Our belief in mutual success has been our core ethos spurring us on the upward spiral of growth. Today, we stand on top, having grown from a startup to a trusted IT consulting company for Fortune 500 companies. Yet, we've kept our roots. We have retained a small company's agility and personal touch, ensuring personalized attention to each client.</p>
       </section>
 
       {/* Our Work Services */}
@@ -297,7 +297,7 @@ export default function Home() {
         <div id="contact" className="cta-banner">
           <div className="cta-content">
             <h2>Make The Move</h2>
-            <button className="btn btn-orange-outline">LET'S COLLABORATE</button>
+            <button className="btn btn-accent-outline">LET'S COLLABORATE</button>
           </div>
           <div className="cta-text">
             <span className="reach-out">REACH OUT</span>
