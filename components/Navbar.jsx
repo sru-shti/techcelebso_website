@@ -43,8 +43,8 @@ export default function Navbar() {
   return (
     <header className="navbar w-full flex items-center justify-between px-8 py-4 bg-white dark:bg-[#0B132B] border-b border-[#E2E8F0] dark:border-[#1C2541] z-50 transition-colors duration-300">
       <div className="logo flex-shrink-0">
-        <Link href="/" className="flex items-center">
-          <img src="/images/Antellay_logo.jpeg" alt="Antellay Logo" className="h-16 w-auto mix-blend-multiply dark:invert dark:mix-blend-screen" />
+        <Link href="/" className="flex items-center justify-start w-10 h-10 md:w-12 md:h-12 overflow-hidden rounded-sm">
+          <img src="/images/Antellay_logo.jpeg" alt="Antellay Logo" className="h-full w-[450%] max-w-none object-cover object-left mix-blend-multiply dark:invert dark:brightness-200 dark:contrast-125 dark:mix-blend-screen transition-all duration-300" />
         </Link>
       </div>
       <nav className="nav-links flex flex-1 justify-center items-center gap-6 text-sm font-medium text-[#0B132B]/70 dark:text-white/60">
@@ -59,8 +59,12 @@ export default function Navbar() {
             Services <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform duration-300 ${isServicesOpen ? "rotate-180" : ""}`}><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           
-          <div className={`absolute top-full left-0 w-full pt-4 transition-all duration-300 z-50 ${isServicesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"}`}>
-            <div className="mx-auto w-full max-w-7xl bg-white dark:bg-[#1C2541] border border-[#E2E8F0] dark:border-[#2D3A54] shadow-2xl rounded-b-sm p-6 md:p-8 max-h-[75vh] md:max-h-[calc(100vh-100px)] overflow-y-auto mega-scroll flex flex-col">
+          <div className={`absolute top-full left-0 w-full h-screen transition-all duration-300 z-50 ${isServicesOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
+            {/* Glass Overlay */}
+            <div className="absolute inset-0 bg-[#0B132B]/5 dark:bg-[#0B132B]/60 backdrop-blur-md transition-opacity duration-300" onClick={() => setIsServicesOpen(false)}></div>
+            
+            {/* Content Panel */}
+            <div className="relative mx-auto w-full max-w-7xl bg-white dark:bg-[#0B132B] border-x border-b border-[#E2E8F0] dark:border-[#1C2541] shadow-2xl rounded-b-sm p-6 md:p-8 max-h-[75vh] md:max-h-[calc(100vh-100px)] overflow-y-auto mega-scroll flex flex-col">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {servicesData.map((category, idx) => {
                   const Icon = category.icon;
@@ -110,8 +114,12 @@ export default function Navbar() {
             Industries <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform duration-300 ${isIndustriesOpen ? "rotate-180" : ""}`}><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           
-          <div className={`absolute top-full left-0 w-full pt-4 transition-all duration-300 z-50 ${isIndustriesOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"}`}>
-            <div className="mx-auto w-full max-w-7xl bg-white dark:bg-[#1C2541] border border-[#E2E8F0] dark:border-[#2D3A54] shadow-2xl rounded-b-sm p-6 md:p-8 max-h-[75vh] md:max-h-[calc(100vh-100px)] overflow-y-auto mega-scroll flex flex-col">
+          <div className={`absolute top-full left-0 w-full h-screen transition-all duration-300 z-50 ${isIndustriesOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
+            {/* Glass Overlay */}
+            <div className="absolute inset-0 bg-[#0B132B]/5 dark:bg-[#0B132B]/60 backdrop-blur-md transition-opacity duration-300" onClick={() => setIsIndustriesOpen(false)}></div>
+            
+            {/* Content Panel */}
+            <div className="relative mx-auto w-full max-w-7xl bg-white dark:bg-[#0B132B] border-x border-b border-[#E2E8F0] dark:border-[#1C2541] shadow-2xl rounded-b-sm p-6 md:p-8 max-h-[75vh] md:max-h-[calc(100vh-100px)] overflow-y-auto mega-scroll flex flex-col">
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 {industriesData.map((category, idx) => {
                   const Icon = category.icon;

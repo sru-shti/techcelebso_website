@@ -38,7 +38,13 @@ export default function Home() {
         <div className="hero-top-text">
           <p>With Antellay you're not just expanding your team, you're augmenting your capabilities. Let's join forces to create a future that's not just possible, but inevitable.</p>
         </div>
-        <h1 className="hero-title">Antellay</h1>
+        <div className="flex justify-center mb-6">
+          <img 
+            src="/images/Antellay_name.jpeg" 
+            alt="Antellay" 
+            className="h-32 md:h-48 lg:h-56 w-auto mix-blend-multiply dark:invert dark:brightness-200 dark:contrast-125 dark:mix-blend-screen transition-all duration-300" 
+          />
+        </div>
         <p className="hero-subtitle">IT solutions & services company.</p>
 
         <div id="industries" className="client-logos">
