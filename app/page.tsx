@@ -34,16 +34,24 @@ export default function Home() {
 
 
       {/* Hero Section */}
-      <section id="about" className="hero-section">
-        <div className="hero-top-text mb-4">
-          <p className="text-slate-700 dark:text-slate-300 transition-colors duration-300">With Antellay you're not just expanding your team, you're augmenting your capabilities. Let's join forces to create a future that's not just possible, but inevitable.</p>
+      <section id="about" className="hero-section bg-white dark:bg-[#0B132B] transition-colors duration-300 flex flex-col items-center justify-center pt-24 pb-16">
+        <div className="hero-top-text mb-4 w-full">
+          <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto text-center mt-4 text-lg transition-colors duration-300">
+            With Antellay you're not just expanding your team, you're augmenting your capabilities. Let's join forces to create a future that's not just possible, but inevitable.
+          </p>
         </div>
-        <div className="flex justify-center mb-2">
-          <h1 className="text-[70px] md:text-[100px] lg:text-[150px] font-extrabold tracking-tighter text-slate-900 dark:text-white transition-colors duration-300 leading-none">
-            ANTELLAY
-          </h1>
+        
+        <div className="flex justify-center w-full px-4 my-8">
+          <img 
+            src="/images/Antellay_name.jpeg" 
+            alt="Antellay" 
+            className="w-full max-w-5xl mx-auto object-contain mix-blend-multiply dark:invert dark:brightness-200 dark:mix-blend-screen transition-all duration-300"
+          />
         </div>
-        <p className="text-lg md:text-2xl font-medium text-slate-900 dark:text-white transition-colors duration-300 mb-16">IT solutions & services company.</p>
+        
+        <p className="text-slate-800 dark:text-slate-100 font-bold text-2xl md:text-4xl text-center mt-6 transition-colors duration-300 mb-16">
+          IT solutions & services company.
+        </p>
 
         <div id="industries" className="client-logos">
           <div className="client-logo-wrapper"><img src="/images/forbes.jpg" alt="Forbes" /></div>
