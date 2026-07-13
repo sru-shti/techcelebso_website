@@ -34,22 +34,22 @@ export default function Home() {
 
 
       {/* Hero Section */}
-      <section id="about" className="hero-section bg-white dark:bg-[#0B132B] transition-colors duration-300 flex flex-col items-center justify-center pt-24 pb-16">
-        <div className="hero-top-text mb-4 w-full">
+      <section id="about" className="hero-section bg-white dark:bg-[#0B132B] transition-colors duration-300 flex flex-col items-center justify-center pt-32 pb-24 min-h-[70vh]">
+        <div className="hero-top-text mb-8 w-full px-6">
           <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto text-center mt-4 text-lg transition-colors duration-300">
             With Antellay you're not just expanding your team, you're augmenting your capabilities. Let's join forces to create a future that's not just possible, but inevitable.
           </p>
         </div>
         
-        <div className="flex justify-center w-full px-4 my-8">
+        <div className="flex justify-center w-full px-6 my-12">
           <img 
             src="/images/Antellay_name.jpeg" 
             alt="Antellay" 
-            className="w-full max-w-5xl mx-auto object-contain mix-blend-multiply dark:invert dark:brightness-200 dark:mix-blend-screen transition-all duration-300"
+            className="w-full max-w-2xl mx-auto block object-contain bg-transparent dark:bg-transparent dark:invert transition-all duration-300"
           />
         </div>
         
-        <p className="text-slate-800 dark:text-slate-100 font-bold text-2xl md:text-4xl text-center mt-6 transition-colors duration-300 mb-16">
+        <p className="text-slate-800 dark:text-slate-100 font-bold text-2xl md:text-4xl text-center mt-10 transition-colors duration-300 mb-16 px-6">
           IT solutions & services company.
         </p>
 
