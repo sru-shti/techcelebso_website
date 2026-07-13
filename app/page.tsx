@@ -45,7 +45,7 @@ export default function Home() {
           <img 
             src="/images/Antellay_name.jpeg" 
             alt="Antellay" 
-            className="w-full max-w-xl mx-auto block object-contain invert mix-blend-multiply dark:invert-0 dark:mix-blend-screen transition-all duration-500 ease-out transform hover:scale-[1.03] hover:filter hover:drop-shadow-[0_0_15px_rgba(58,134,255,0.3)] dark:hover:drop-shadow-[0_0_15px_rgba(0,245,212,0.5)]"
+            className="w-full max-w-xl mx-auto block object-contain mix-blend-multiply dark:invert dark:mix-blend-screen transition-all duration-500 ease-out transform hover:scale-[1.03] hover:filter hover:drop-shadow-[0_0_15px_rgba(58,134,255,0.3)] dark:hover:drop-shadow-[0_0_15px_rgba(0,245,212,0.5)]"
           />
         </div>
         
