@@ -43,8 +43,10 @@ export default function Navbar() {
   return (
     <header className="navbar w-full flex items-center justify-between px-8 py-4 bg-white dark:bg-[#0B132B] border-b border-[#E2E8F0] dark:border-[#1C2541] z-50 transition-colors duration-300">
       <div className="logo flex-shrink-0">
-        <Link href="/" className="flex items-center justify-start w-10 h-10 md:w-12 md:h-12 overflow-hidden rounded-sm">
-          <img src="/images/Antellay_logo.jpeg" alt="Antellay Logo" className="h-full w-[450%] max-w-none object-cover object-left mix-blend-multiply dark:invert dark:brightness-200 dark:contrast-125 dark:mix-blend-screen transition-all duration-300" />
+        <Link href="/" className="flex items-center">
+          <span className="font-extrabold text-3xl tracking-tighter text-slate-900 dark:text-white transition-colors duration-300">
+            Λ
+          </span>
         </Link>
       </div>
       <nav className="nav-links flex flex-1 justify-center items-center gap-6 text-sm font-medium text-[#0B132B]/70 dark:text-white/60">
@@ -187,8 +189,8 @@ export default function Navbar() {
             )}
           </button>
         )}
-        <Link href="/contact" className="group relative overflow-hidden px-5 py-2 border border-[#E2E8F0] dark:border-[#2D3A54] rounded-sm text-sm font-semibold text-[#0B132B] dark:text-white hover:border-[#3A86FF] dark:hover:border-[#00F5D4] transition-all duration-300">
-          <span className="relative z-10 group-hover:text-[#3A86FF] dark:group-hover:text-[#00F5D4] transition-colors">Get a Free Consultation</span>
+        <Link href="/contact" className="px-5 py-2 border-2 border-slate-900 dark:border-white rounded-sm text-sm font-bold text-slate-900 dark:text-white hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-[#0B132B] transition-all duration-300">
+          Get a Free Consultation
         </Link>
       </div>
     </header>
